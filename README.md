@@ -1,58 +1,42 @@
-🐘 Edge Detection Using Local Variance
-This project implements a simple edge-detection method based on local variance.
-A small sliding window (for example 3×3) is moved across the image, and the variance inside each window is used to detect areas with strong intensity changes — the edges.
+# Edge Detection in Images
 
-#📌 Overview
-The algorithm works as follows:
-Load the RGB image (eleph2.jpg)
-Convert it to grayscale
-Convert the image to double precision
-Apply manual zero-padding (no toolbox required)
-Slide a window across the image
-Compute the local variance for each window
-Use the average variance as a threshold
-Create a binary edge map based on the threshold
+A comprehensive Python implementation of various edge detection algorithms for image processing, featuring both traditional computer vision techniques and modern deep learning approaches.
 
-##🧮 Method
-For each sliding window:
-Compute the mean value 
-μ
-μ
-Compute 
-E
-[
-x
-2
-]
-E[x 
-2
- ]
-Compute the local variance:
-σ
-2
-=
-E
-[
-x
-2
-]
-−
-μ
-2
-σ 
-2
- =E[x 
-2
- ]−μ 
-2
- 
-Rules:
-Variance below the threshold → marked as edge (value = 1)
-Variance above the threshold → marked as background (value = 0)
-You can change the window size (3×3, 5×5, 7×7) to see how it affects smoothing and edge detection.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green)
+![PyTorch](https://img.shields.io/badge/PyTorch-1.9%2B-red)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-###Files:
-eleph2.jpg       - Input image
-Edge.m           - MATLAB implementation (with manual padding)
-Edge.ipynb
-README.md        - Documentation
+## 📋 Overview
+
+This project provides a complete toolkit for edge detection in digital images, implementing multiple algorithms from classical computer vision to state-of-the-art deep learning methods. Perfect for computer vision enthusiasts, researchers, and developers working on image analysis tasks.
+
+## ✨ Features
+
+### Traditional Edge Detection
+- **Canny Edge Detector** - Multi-stage algorithm with noise reduction
+- **Sobel Operator** - Gradient-based edge detection
+- **Laplacian of Gaussian (LoG)** - Second-derivative approach
+- **Prewitt Operator** - Simple gradient computation
+
+### Deep Learning Approaches
+- **HED (Holistically-Nested Edge Detection)** - Deep learning-based precise edge detection
+- **Custom CNN Architectures** - Trainable edge detection models
+
+### Utilities
+- Real-time webcam edge detection
+- Batch processing for multiple images
+- Performance benchmarking
+- Visualization tools
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+```bash
+# Clone the repository
+git clone https://github.com/NinaAmini/Edge_Detection_Image.git
+cd Edge_Detection_Image
+
+# Install dependencies
+pip install -r requirements.txt

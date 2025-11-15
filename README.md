@@ -38,5 +38,3 @@ This project provides a complete toolkit for edge detection in digital images, i
 git clone https://github.com/NinaAmini/Edge_Detection_Image.git
 cd Edge_Detection_Image
 
-# Install dependencies
-pip install -r requirements.txt
